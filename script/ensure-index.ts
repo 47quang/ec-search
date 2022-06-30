@@ -1,20 +1,18 @@
-import dotenv from 'dotenv';
-import _ from 'lodash';
-dotenv.config();
-
+import * as dotenv from 'dotenv';
+import * as _ from 'lodash';
 import { recipeIndexMapping } from './indexes/recipe.constant';
 import { Client } from '@elastic/elasticsearch';
 
-const elasticsearch = new Client({
-  node: process.env.ELASTICSEARCH_ENDPOINT || 'http://localhost:9200',
-});
+dotenv.config({ path: __dirname + '/.env.development' });
+const endpoint = process.env.ELASTICSEARCH_ENDPOINT || 'http://localhost:9200';
+const elasticsearch = new Client({ node: endpoint, auth: null });
 
 const indices = [recipeIndexMapping];
 
 const main = async () => {
   for (const indexMapping of indices) {
     const index = _.get(indexMapping, 'index', '');
-    const response = elasticsearch.indices.exists({ index });
+    const response = await elasticsearch.indices.exists({ index });
     const statusCode = _.get(response, 'statusCode');
 
     // validate index and create if not any
