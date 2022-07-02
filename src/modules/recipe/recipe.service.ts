@@ -36,6 +36,32 @@ export class RecipeService {
     }
   }
 
+  /**
+   * reindex specified document in elasticsearch
+   * @param id
+   * @param updateDto
+   * @returns
+   */
+  public async update(id: string, updateDto: RecipeDto) {
+    const _doc: any = _.cloneDeep(updateDto);
+    _doc.search = this.searchParser(_doc);
+
+    await this.esService.update({
+      index: Indices.RECIPE,
+      id,
+      body: {
+        doc: _doc,
+      },
+    });
+
+    return _doc;
+  }
+
+  public async delete(id: string) {
+    const response = await this.esService.delete({ index: Indices.RECIPE, id });
+    return _.get(response, 'statusCode');
+  }
+
   private searchParser(recipe: RecipeDto): Record<string, any> {
     const { content, title, category, tags, products } = recipe;
 
@@ -87,13 +113,7 @@ export class RecipeService {
   }
 
   private combineTerm(base: string, term: string) {
-    if (term) {
-      if (base) {
-        return `${base} ${term}`;
-      }
-      return term;
-    }
-    return base;
+    return base && term ? `${base} ${term}` : term ? term : base;
   }
 
   private searchify = (query: any): string => {

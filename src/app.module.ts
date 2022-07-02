@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
 import { RecipeModule } from 'src/modules/recipe/recipe.module';
+import { SearchModule } from 'src/modules/search/search.module';
 import { SharedModule } from 'src/shared/shared.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
-  imports: [SharedModule, RecipeModule],
+  imports: [SharedModule, RecipeModule, SearchModule],
   controllers: [AppController],
   providers: [AppService],
 })
