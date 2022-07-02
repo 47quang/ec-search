@@ -1,7 +1,6 @@
 import { Global, Module, Logger, HttpException } from '@nestjs/common';
 import { ElasticsearchModule, ElasticsearchService } from '@nestjs/elasticsearch';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ProductDAL } from 'src/shared/data-access-layer/product.dal';
 import configuration from 'src/config/configuration';
 
 @Global()
@@ -22,6 +21,7 @@ import configuration from 'src/config/configuration';
       isGlobal: true,
     }),
   ],
+  exports: [ElasticsearchModule],
 })
 export class SharedModule {
   constructor(private es: ElasticsearchService) {
