@@ -1,43 +1,55 @@
+import { ApiPropertyOptional } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
 import { IsArray, IsBoolean, IsIn, IsNumber, IsOptional, IsString } from 'class-validator';
 import * as _ from 'lodash';
 import { SortEnum } from 'src/constants/indices';
 
 export class SearchParams {
+  @ApiPropertyOptional()
   @IsOptional()
   @IsString()
   @Transform((v) => searchify(v)) // need to nomalize before executing it with elasticsearch
   q?: string;
 
+  @ApiPropertyOptional()
   @IsOptional()
   @Transform((v) => Number(v))
   @IsNumber()
   page?: number;
 
+  @ApiPropertyOptional()
   @IsOptional()
   @Transform((v) => Number(v))
   @IsNumber()
   perpage?: number;
 
+  @ApiPropertyOptional({
+    type: 'enum',
+    enum: SortEnum,
+  })
   @IsOptional()
   @IsIn([SortEnum.BY_CREATED_AT, SortEnum.BY_VIEWS])
   @IsString()
   sort?: SortEnum = SortEnum.BY_CREATED_AT; // default sort by created at
 
+  @ApiPropertyOptional()
   @IsOptional()
   @IsString()
   categoryId?: string;
 
+  @ApiPropertyOptional()
   @IsOptional()
   @Transform((v) => (_.isString(v) ? v.split(',') : v))
   @IsArray()
   @IsString({ each: true })
   ids?: string[];
 
+  @ApiPropertyOptional()
   @IsOptional()
   @IsString()
   authorId?: string;
 
+  @ApiPropertyOptional()
   @IsOptional()
   @Transform((v) => (_.isString(v) ? v === 'true' : v))
   @IsBoolean()

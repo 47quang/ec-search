@@ -1,8 +1,10 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { RecipeDto } from 'src/modules/recipe/dtos/recipe.dto';
 import { RecipeService } from 'src/modules/recipe/recipe.service';
 
 @Controller('recipes')
+@ApiTags('Recipe')
 export class RecipeController {
   constructor(private readonly recipeService: RecipeService) {}
 
