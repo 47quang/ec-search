@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
 import * as _ from 'lodash';
-import { Indices } from 'src/constants/indices';
+import { Indices, SortEnum } from 'src/constants/indices';
 import { SearchParams } from 'src/modules/search/search.dto';
 
 @Injectable()
@@ -9,10 +9,12 @@ export class SearchService {
   constructor(private readonly esService: ElasticsearchService) {}
   public async search(searchParams: SearchParams) {
     // search by specified id
-    let searchQuery;
-    const { ids } = searchParams;
-    if (!_.isEmpty(ids)) {
-      searchQuery = this.searchById(ids);
+    let searchQuery: Record<string, any>;
+    const { ids, authorId } = searchParams;
+    if (!_.isEmpty(authorId)) {
+      searchQuery = this.buildSearchQueryByVendor(authorId);
+    } else if (!_.isEmpty(ids)) {
+      searchQuery = this.buildSearchQueryByIds(ids);
     } else {
       searchQuery = this.buildSearchQuery(searchParams);
     }
@@ -37,7 +39,7 @@ export class SearchService {
    * @param ids
    * @returns
    */
-  private searchById(ids: string[]) {
+  private buildSearchQueryByIds(ids: string[]) {
     return {
       _source: { exclude: ['search'] }, // exclude custom field for search feature
       query: {
@@ -45,6 +47,14 @@ export class SearchService {
           must: [{ terms: { id: ids } }],
         },
       },
+    };
+  }
+
+  private buildSearchQueryByVendor(vendorId: string) {
+    const selectedFields = ['id', 'title', 'thumbnail', 'content', 'views'];
+    return {
+      _source: selectedFields, // exclude custom field for search feature
+      query: { bool: { must: [{ term: { 'author.id': vendorId } }] } },
     };
   }
 
@@ -74,7 +84,7 @@ export class SearchService {
   private buildSearchCondition(searchParams: SearchParams) {
     const searchContainer: Record<string, any> = {
       bool: {
-        must: [
+        should: [
           {
             multi_match: {
               query: searchParams.q || '',
@@ -92,7 +102,7 @@ export class SearchService {
 
     const scopeCondition = this.getScopeCondition(searchParams);
     if (!_.isEmpty(scopeCondition)) {
-      searchContainer.bool.must.push(scopeCondition);
+      searchContainer.bool.should.push(scopeCondition);
     }
 
     return searchContainer;
@@ -110,7 +120,15 @@ export class SearchService {
   }
 
   private getSortCondition(searchParams: SearchParams) {
-    console.log(searchParams);
+    const { sort } = searchParams;
+    switch (sort) {
+      case SortEnum.BY_CREATED_AT:
+        return [{ created_at: { order: 'desc' } }];
+      case SortEnum.BY_VIEWS:
+        return [{ views: { order: 'desc' } }];
+      default:
+        return;
+    }
     return;
   }
 }

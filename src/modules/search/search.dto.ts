@@ -1,6 +1,7 @@
 import { Transform } from 'class-transformer';
-import { IsArray, IsBoolean, IsNumber, IsOptional, IsString } from 'class-validator';
+import { IsArray, IsBoolean, IsIn, IsNumber, IsOptional, IsString } from 'class-validator';
 import * as _ from 'lodash';
+import { SortEnum } from 'src/constants/indices';
 
 export class SearchParams {
   @IsOptional()
@@ -19,8 +20,9 @@ export class SearchParams {
   perpage?: number;
 
   @IsOptional()
+  @IsIn([SortEnum.BY_CREATED_AT, SortEnum.BY_VIEWS])
   @IsString()
-  sort?: string;
+  sort?: SortEnum = SortEnum.BY_CREATED_AT; // default sort by created at
 
   @IsOptional()
   @IsString()
@@ -31,6 +33,10 @@ export class SearchParams {
   @IsArray()
   @IsString({ each: true })
   ids?: string[];
+
+  @IsOptional()
+  @IsString()
+  authorId?: string;
 
   @IsOptional()
   @Transform((v) => (_.isString(v) ? v === 'true' : v))

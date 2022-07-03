@@ -3,6 +3,7 @@ import { Type, Transform } from 'class-transformer';
 import { CategoryDto } from 'src/modules/recipe/dtos/category.dto';
 import { TagDto } from 'src/modules/recipe/dtos/tag.dto';
 import { ProductDto } from 'src/modules/recipe/dtos/product.dto';
+import { AuthorDto } from 'src/modules/recipe/dtos/author.dto';
 
 export class RecipeDto {
   @IsDefined()
@@ -25,6 +26,11 @@ export class RecipeDto {
   @ValidateNested()
   @Type(() => CategoryDto)
   category: CategoryDto;
+
+  @IsDefined()
+  @ValidateNested()
+  @Type(() => AuthorDto)
+  author: AuthorDto;
 
   @IsDefined()
   @IsArray()
