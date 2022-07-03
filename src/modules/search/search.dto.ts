@@ -15,13 +15,13 @@ export class SearchParams {
   @IsOptional()
   @Transform((v) => Number(v))
   @IsNumber()
-  page?: number;
+  page?: number = 0;
 
   @ApiPropertyOptional()
   @IsOptional()
   @Transform((v) => Number(v))
   @IsNumber()
-  perpage?: number;
+  perpage?: number = 10;
 
   @ApiPropertyOptional({
     type: 'enum',
