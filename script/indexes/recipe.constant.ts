@@ -126,6 +126,12 @@ export const recipeIndexMapping = {
             products: {
               type: 'text',
             },
+            content: {
+              type: 'text',
+            },
+            title: {
+              type: 'text',
+            },
           },
         },
         created_at: {
