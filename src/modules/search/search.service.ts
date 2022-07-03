@@ -9,11 +9,13 @@ export class SearchService {
   constructor(private readonly esService: ElasticsearchService) {}
   public async search(searchParams: SearchParams) {
     // search by specified id
+    let searchQuery;
     const { ids } = searchParams;
     if (!_.isEmpty(ids)) {
-      return this.searchById(ids);
+      searchQuery = this.searchById(ids);
+    } else {
+      searchQuery = this.buildSearchQuery(searchParams);
     }
-    const searchQuery = this.buildSearchQuery(searchParams);
     if (_.isEmpty(searchQuery)) return [];
 
     try {
@@ -36,7 +38,14 @@ export class SearchService {
    * @returns
    */
   private searchById(ids: string[]) {
-    return [];
+    return {
+      _source: { exclude: ['search'] }, // exclude custom field for search feature
+      query: {
+        bool: {
+          must: [{ terms: { id: ids } }],
+        },
+      },
+    };
   }
 
   private buildSearchQuery(searchParams: SearchParams) {
@@ -68,7 +77,7 @@ export class SearchService {
         must: [
           {
             multi_match: {
-              query: searchParams.q,
+              query: searchParams.q || '',
               // ^3 is to triple weight for the field title
               fields: ['search.title^4', 'search.merged_search^3', 'search.content'],
               fuzziness: searchParams.fuzzy ? 1 : 0,

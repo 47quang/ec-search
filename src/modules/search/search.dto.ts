@@ -27,6 +27,7 @@ export class SearchParams {
   categoryId?: string;
 
   @IsOptional()
+  @Transform((v) => (_.isString(v) ? v.split(',') : v))
   @IsArray()
   @IsString({ each: true })
   ids?: string[];
