@@ -1,0 +1,85 @@
+[
+  {
+    "id": "18b0a2af-7ca9-423a-99bd-658752f160bh",
+    "author": {
+      "id": "68518da1-85c5-47ee-9d9a-dd614db84e4e",
+      "user_id": "e030cb18-9337-40a7-bcd0-798f1ed91845",
+      "name": "Nấu ăn là đơn giản với Aiden",
+      "address": "&{3190 Lake Burgs bury, Toledo, Nebraska 10805 3190 Lake Burgs bury Toledo Nebraska 10805 Iran (Islamic Republic of) 40.208128 -141.174898}",
+      "created_at": "1962-08-10T19:04:39.643Z",
+      "updated_at": "1950-06-26T03:04:39.269Z"
+    },
+    "title": "Nấu các món châu á trong 15 phút",
+    "thumbnail": "https://picsum.photos/500/500",
+    "content": "Nếu bạn thường xuyên bận bịu, không có thời gian cho các hoạt động bếp nút, đây là bài viết tuyệt vời dành cho bạn, chúng tôi cung cấp cho bạn một số công thức nấu ăn với các món á đơn giản, chỉ tốn khoảng 15 phút cho mỗi món, thực đơn này trải dài cho các ngày trong tuần. Việc bạn cần chỉ là chọn món mình thích và hành động",
+    "category": {
+      "id": "6fa95f27-c7ab-4138-8ecb-6287b876c155",
+      "name": "Châu Á",
+      "thumbnail": "https://picsum.photos/500/500",
+      "created_at": "1953-01-07T22:02:01.414Z",
+      "updated_at": "1967-11-09T10:04:37.708Z"
+    },
+    "tags": [
+      {
+        "id": "97eeccb7-a3ca-481b-96c5-6171a99661af",
+        "name": "Món Á",
+        "type": "location",
+        "created_at": "2013-06-09T01:37:10.279Z",
+        "updated_at": "1988-06-15T05:11:56.216Z"
+      },
+      {
+        "id": "47256ef9-8791-4549-b977-d55b6f31f635",
+        "name": "Dưới 15 phút",
+        "type": "time",
+        "created_at": "1973-07-02T12:32:37.896Z",
+        "updated_at": "1964-01-10T06:09:56.567Z"
+      },
+      {
+        "id": "555c17b2-17d3-4815-8ee5-5c665a7049e3",
+        "name": "Nam",
+        "type": "gender",
+        "created_at": "1953-11-27T08:58:54.423Z",
+        "updated_at": "1912-02-20T06:32:23.875Z"
+      }
+    ],
+    "nutrition": "Alone that away it sew. Few company world below gallop.<br />Whoever Sudanese himself about whenever. Smoke fade mouth on depend.",
+    "products": [
+      {
+        "id": "e06621ab-cee7-4905-bc69-f45f9625c98c",
+        "name": "senator",
+        "data_source": "Shopee",
+        "data_source_url": "tiki.vn/products/123456",
+        "created_at": "1990-06-27T17:27:47.462Z",
+        "updated_at": "1913-08-20T13:36:44.015Z"
+      },
+      {
+        "id": "7ab7d1be-ad8a-47c7-a5d7-f01d57d12f3c",
+        "name": "ball",
+        "data_source": "Tiki",
+        "data_source_url": "tiki.vn/products/123456",
+        "created_at": "1937-09-29T22:43:00.848Z",
+        "updated_at": "1988-08-01T15:35:27.472Z"
+      },
+      {
+        "id": "84810b34-afdf-423c-9fee-14833e3fa9c1",
+        "name": "blazer",
+        "data_source": "Tiki",
+        "data_source_url": "tiki.vn/products/123456",
+        "created_at": "2002-10-25T12:32:06.283Z",
+        "updated_at": "1979-06-11T03:14:56.442Z"
+      }
+    ],
+    "views": 1841,
+    "created_at": "1991-08-22T22:07:00.335Z",
+    "updated_at": "2006-08-16T17:12:41.803Z",
+    "search": {
+      "content": "nếu bạn thường xuyên bận bịu, không có thời gian cho các hoạt động bếp nút, đây là bài viết tuyệt vời dành cho bạn, chúng tôi cung cấp cho bạn một số công thức nấu ăn với các món á đơn giản, chỉ tốn khoảng 15 phút cho mỗi món, thực đơn này trải dài cho các ngày trong tuần. việc bạn cần chỉ là chọn món mình thích và hành động",
+      "title": "Nấu các món châu á trong 15 phút",
+      "slug": "nau-cac-mon-chau-a-trong-15-phut",
+      "category": "châu á",
+      "tags": "location món á time dưới 15 phút gender nam",
+      "products": "senator ball blazer",
+      "merged_search": "Nấu các món châu á trong 15 phút nau-cac-mon-chau-a-trong-15-phut châu á location món á time dưới 15 phút gender nam senator ball blazer"
+    }
+  }
+]

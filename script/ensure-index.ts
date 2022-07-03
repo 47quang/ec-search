@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import * as fs from 'fs';
 dotenv.config({ path: __dirname + '/.env.development' });
 
 import * as _ from 'lodash';
@@ -13,8 +14,9 @@ const endpoint = process.env.ELASTICSEARCH_ENDPOINT || 'http://localhost:9200';
  * -o: overwrite index if any
  */
 const args = yargs.argv;
-const indices = [recipeIndexMapping];
 const elasticsearch = new Client({ node: endpoint, auth: null });
+const recipeJSON = JSON.parse(fs.readFileSync(__dirname + '/json/recipe.json').toString());
+const indices = [{ _i: recipeIndexMapping, _d: recipeJSON }];
 
 const main = async () => {
   const cleanup: any = args.c;
@@ -22,7 +24,7 @@ const main = async () => {
     let expectedIndices = [];
     if (cleanup === true) {
       // clean up all indices
-      expectedIndices = _.map(indices, 'index');
+      expectedIndices = _.map(indices, '_i.index');
     } else if (_.isString(cleanup)) {
       // clean up partial indices
       expectedIndices = cleanup.split(',');
@@ -37,7 +39,8 @@ const main = async () => {
 };
 
 const initIndices = async (overwrite = false) => {
-  for (const indexMapping of indices) {
+  for (const item of indices) {
+    const { _i: indexMapping, _d: docs } = item;
     try {
       const index = _.get(indexMapping, 'index', '');
       const response = await elasticsearch.indices.exists({ index });
@@ -55,6 +58,13 @@ const initIndices = async (overwrite = false) => {
           break;
         case 404: // not existed
           await elasticsearch.indices.create(indexMapping);
+          await sleep(1000);
+          const bulkBody = buildBulkIndex(docs, index);
+          await elasticsearch.bulk({
+            index,
+            refresh: true,
+            body: bulkBody,
+          });
           console.log('Create index ', index);
           break;
         default:
@@ -64,6 +74,17 @@ const initIndices = async (overwrite = false) => {
       console.log('err: ', error.stack);
     }
   }
+};
+
+const buildBulkIndex = (docs: any[], index: string) => {
+  const bulkBody = [];
+  for (const doc of docs) {
+    const { id } = doc;
+    bulkBody.push({ index: { _index: index, _id: id } });
+    bulkBody.push(doc);
+  }
+
+  return bulkBody;
 };
 
 const cleanupIndices = async (expectedIndices: string[]) => {
