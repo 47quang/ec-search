@@ -1,5 +1,6 @@
 export enum Indices {
   RECIPE = 'ec-recipes',
+  TAG = 'ec-tags',
 }
 
 export enum SortEnum {

@@ -1,7 +1,7 @@
 import { IsArray, IsDate, IsDefined, IsNumber, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { Type, Transform } from 'class-transformer';
 import { CategoryDto } from 'src/modules/recipe/dtos/category.dto';
-import { TagDto } from 'src/modules/recipe/dtos/tag.dto';
+import { TagDto } from 'src/modules/tag/dtos/tag.dto';
 import { ProductDto } from 'src/modules/recipe/dtos/product.dto';
 import { AuthorDto } from 'src/modules/recipe/dtos/author.dto';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';

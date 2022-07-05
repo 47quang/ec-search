@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { RecipeDto } from 'src/modules/recipe/dtos/recipe.dto';
 import * as _ from 'lodash';
-import { TagDto } from 'src/modules/recipe/dtos/tag.dto';
+import { TagDto } from 'src/modules/tag/dtos/tag.dto';
 import { ProductDto } from 'src/modules/recipe/dtos/product.dto';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
 import { Indices } from 'src/constants/indices';

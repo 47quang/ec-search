@@ -5,6 +5,7 @@ dotenv.config({ path: __dirname + '/.env.development' });
 import * as _ from 'lodash';
 import * as yargs from 'yargs';
 import { recipeIndexMapping } from './indexes/recipe.constant';
+import { tagIndexMapping } from './indexes/tag.constant';
 import { Client } from '@elastic/elasticsearch';
 
 const endpoint = process.env.ELASTICSEARCH_ENDPOINT || 'http://localhost:9200';
@@ -16,7 +17,11 @@ const endpoint = process.env.ELASTICSEARCH_ENDPOINT || 'http://localhost:9200';
 const args = yargs.argv;
 const elasticsearch = new Client({ node: endpoint, auth: null });
 const recipeJSON = JSON.parse(fs.readFileSync(__dirname + '/json/recipe.json').toString());
-const indices = [{ _i: recipeIndexMapping, _d: recipeJSON }];
+const tagJSON = JSON.parse(fs.readFileSync(__dirname + '/json/tag.json').toString());
+const indices: any = [
+  { _i: recipeIndexMapping, _d: recipeJSON },
+  { _i: tagIndexMapping, _d: tagJSON },
+];
 
 const main = async () => {
   const cleanup: any = args.c;
@@ -58,14 +63,15 @@ const initIndices = async (overwrite = false) => {
           break;
         case 404: // not existed
           await elasticsearch.indices.create(indexMapping);
+          console.log('Create index ', index);
           await sleep(1000);
+          if (!docs) break;
           const bulkBody = buildBulkIndex(docs, index);
           await elasticsearch.bulk({
             index,
             refresh: true,
             body: bulkBody,
           });
-          console.log('Create index ', index);
           break;
         default:
           break;
