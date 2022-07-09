@@ -42,6 +42,13 @@ export class SearchParams {
   @Transform((v) => (_.isString(v) ? v.split(',') : v))
   @IsArray()
   @IsString({ each: true })
+  tagIds?: string[];
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @Transform((v) => (_.isString(v) ? v.split(',') : v))
+  @IsArray()
+  @IsString({ each: true })
   ids?: string[];
 
   @ApiPropertyOptional()
@@ -72,7 +79,7 @@ const searchify = (query: string, enablePlusCharacterSearch = false) => {
     // Remove HTML Tags
     query = query.replace(/<\/?[^>]+(>|$)/g, '');
     // remove allowed special characters but stand alone
-    query = query.replace(/(\s+|^)([~`+-\-!@#$%^&*()_={}[\]|:;"'<>,.?/\\\s]+)(\s+|$)/g, ' ').replace(/\s\s+/g, ' ');
+    query = query.replace(/(\s+|^)([~`+-\-!@$%^&*()_={}[\]|:;"'<>,.?/\\\s]+)(\s+|$)/g, ' ').replace(/\s\s+/g, ' ');
     return query;
   } else {
     return null;

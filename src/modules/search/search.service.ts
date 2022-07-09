@@ -4,34 +4,71 @@ import * as _ from 'lodash';
 import { Indices, SortEnum } from 'src/constants/indices';
 import { SearchParams } from 'src/modules/search/search.dto';
 
+const hashtagRegex = /^#[^ !@#$%^&*(),.?":{}|<>]*$/;
+
 @Injectable()
 export class SearchService {
   constructor(private readonly esService: ElasticsearchService) {}
   public async search(searchParams: SearchParams) {
     // search by specified id
-    let searchQuery: Record<string, any>;
-    const { ids, authorId } = searchParams;
-    if (!_.isEmpty(authorId)) {
-      searchQuery = this.buildSearchQueryByVendor(authorId);
+    const searchType: any = {};
+    const { ids, authorId, q } = searchParams;
+    if (hashtagRegex.test(q)) {
+      searchType['recipes'] = this.buildSearchQuery(searchParams);
+      searchType['tags'] = this.buildSearchTag(q);
+    } else if (!_.isEmpty(authorId)) {
+      searchType['recipes'] = this.buildSearchQueryByVendor(authorId);
     } else if (!_.isEmpty(ids)) {
-      searchQuery = this.buildSearchQueryByIds(ids);
+      searchType['recipes'] = this.buildSearchQueryByIds(ids);
     } else {
-      searchQuery = this.buildSearchQuery(searchParams);
+      searchType['recipes'] = this.buildSearchQuery(searchParams);
     }
-    if (_.isEmpty(searchQuery)) return [];
 
-    try {
-      const response = await this.esService.search({
-        index: Indices.RECIPE,
-        body: searchQuery,
-      });
+    const result: Record<string, any> = {};
+    for (const type in searchType) {
+      const searchQuery = searchType[type];
+      if (type === 'tags') {
+        try {
+          const response = await this.esService.search({
+            index: Indices.TAG,
+            body: searchQuery,
+          });
+          const searchResults = _.get(response, 'body.hits.hits', []);
+          result[type] = _.map(searchResults, '_source');
+        } catch (error) {
+          console.log(error);
+          result[type] = [];
+        }
+      } else if (type === 'recipes') {
+        if (_.isEmpty(searchQuery)) {
+          result[type] = [];
+          continue;
+        }
+        try {
+          const response = await this.esService.search({
+            index: Indices.RECIPE,
+            body: searchQuery,
+          });
 
-      const searchResults = _.get(response, 'body.hits.hits', []);
-      return _.map(searchResults, '_source');
-    } catch (error) {
-      console.log(error);
-      return [];
+          const searchResults = _.get(response, 'body.hits.hits', []);
+          result[type] = _.map(searchResults, '_source');
+        } catch (error) {
+          console.log(error);
+          result[type] = [];
+        }
+      }
     }
+    return result;
+  }
+
+  private buildSearchTag(searchTerms: string) {
+    return {
+      query: {
+        match_phrase_prefix: {
+          name: searchTerms,
+        },
+      },
+    };
   }
 
   /**
@@ -68,7 +105,7 @@ export class SearchService {
     const queryContainer: Record<string, any> = {
       size: perpage,
       from: page * perpage,
-      _source: selectedFields,
+      // _source: selectedFields,
     };
 
     if (!_.isEmpty(sortCondition)) {
@@ -82,27 +119,46 @@ export class SearchService {
   }
 
   private buildSearchCondition(searchParams: SearchParams) {
-    const searchContainer: Record<string, any> = {
+    const { q = '' } = searchParams;
+    let additionalShould = [];
+    if (hashtagRegex.test(q)) {
+      additionalShould = [
+        {
+          nested: {
+            path: 'tags',
+            query: {
+              match_phrase_prefix: {
+                'tags.name.engram': q,
+              },
+            },
+          },
+        },
+      ];
+    }
+    let searchContainer: Record<string, any> = {
       bool: {
         should: [
           {
             multi_match: {
-              query: searchParams.q || '',
+              query: q,
               // ^3 is to triple weight for the field title
               fields: ['search.title^4', 'search.merged_search^3', 'search.content'],
               fuzziness: searchParams.fuzzy ? 1 : 0,
               prefix_length: 2,
             },
           },
+          ...additionalShould,
         ],
       },
     };
 
-    console.log('searchContainer', JSON.stringify(searchContainer));
+    if (_.isEmpty(q)) {
+      searchContainer = { bool: { should: [] } };
+    }
 
     const scopeCondition = this.getScopeCondition(searchParams);
     if (!_.isEmpty(scopeCondition)) {
-      searchContainer.bool.should.push(scopeCondition);
+      searchContainer.bool.should.push(...scopeCondition);
     }
 
     return searchContainer;
@@ -114,9 +170,29 @@ export class SearchService {
    * @returns
    */
   private getScopeCondition(searchParams: SearchParams) {
-    const { categoryId } = searchParams;
-    if (!categoryId) return;
-    return { term: { 'category.id': categoryId } };
+    const additionalScopes = [];
+    const { categoryId, tagIds } = searchParams;
+    if (categoryId) {
+      additionalScopes.push({ term: { 'category.id': categoryId } });
+    }
+
+    if (!_.isEmpty(tagIds)) {
+      const nested = {
+        nested: {
+          path: 'tags',
+          query: {
+            bool: {
+              should: tagIds.map((tagId) => ({ term: { 'tags.id': tagId } })),
+            },
+          },
+        },
+      };
+      additionalScopes.push(nested);
+    }
+
+    console.log({ additionalScopes });
+
+    return additionalScopes;
   }
 
   private getSortCondition(searchParams: SearchParams) {

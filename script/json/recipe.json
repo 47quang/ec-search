@@ -13,19 +13,19 @@
     "thumbnail": "https://picsum.photos/500/500",
     "content": "Nếu bạn thường xuyên bận bịu, không có thời gian cho các hoạt động bếp nút, đây là bài viết tuyệt vời dành cho bạn, chúng tôi cung cấp cho bạn một số công thức nấu ăn với các món á đơn giản, chỉ tốn khoảng 15 phút cho mỗi món, thực đơn này trải dài cho các ngày trong tuần. Việc bạn cần chỉ là chọn món mình thích và hành động",
     "category": {
-      "id": "6fa95f27-c7ab-4138-8ecb-6287b876c155",
-      "name": "Châu Á",
-      "thumbnail": "https://picsum.photos/500/500",
-      "created_at": "1953-01-07T22:02:01.414Z",
-      "updated_at": "1967-11-09T10:04:37.708Z"
+      "id": "8df60772-1744-476b-b860-43373d0d4ca2",
+      "name": "Salad",
+      "thumbnail": "https://i.ibb.co/vPNWkVb/19-salad-128.png",
+      "created_at": "1925-10-24T03:13:39.897477938Z",
+      "updated_at": "1947-10-19T13:02:45.515487394Z"
     },
     "tags": [
       {
-        "id": "97eeccb7-a3ca-481b-96c5-6171a99661af",
-        "name": "Món Á",
-        "type": "location",
-        "created_at": "2013-06-09T01:37:10.279Z",
-        "updated_at": "1988-06-15T05:11:56.216Z"
+        "id": "e033eba3-5834-4289-b497-6bd5b1c78387",
+        "name": "#bunmoc",
+        "type": "recipe",
+        "created_at": "1972-03-19T14:36:39.35940179Z",
+        "updated_at": "1935-12-17T16:49:08.1366902Z"
       },
       {
         "id": "47256ef9-8791-4549-b977-d55b6f31f635",

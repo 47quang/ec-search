@@ -35,6 +35,7 @@ const main = async () => {
       expectedIndices = cleanup.split(',');
     }
 
+    console.log('clear done');
     await cleanupIndices(expectedIndices);
     return;
   }
