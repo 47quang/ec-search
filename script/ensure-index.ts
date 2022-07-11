@@ -18,10 +18,7 @@ const args = yargs.argv;
 const elasticsearch = new Client({ node: endpoint, auth: null });
 const recipeJSON = JSON.parse(fs.readFileSync(__dirname + '/json/recipe.json').toString());
 const tagJSON = JSON.parse(fs.readFileSync(__dirname + '/json/tag.json').toString());
-const indices: any = [
-  { _i: recipeIndexMapping, _d: recipeJSON },
-  { _i: tagIndexMapping, _d: tagJSON },
-];
+const indices: any = [{ _i: recipeIndexMapping }, { _i: tagIndexMapping, _d: tagJSON }];
 
 const main = async () => {
   const cleanup: any = args.c;

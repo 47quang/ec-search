@@ -1,128 +1,480 @@
 [
   {
-    "id": "33c7dbca-c864-4f87-9c75-517f07014e80",
-    "name": "Món ăn với cơm ",
-    "thumbnail": "https://i.ibb.co/yS0cDNc/22-bento-128.png",
-    "created_at": "1953-01-07T22:02:01.414565593Z",
-    "updated_at": "1967-11-09T10:04:37.708228926Z"
+    "id": "01G7JEFCDTEK8GSMYS83PC5HDF",
+    "author_id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+    "category_id": "01G7JA7Z9598BS2MJZG02XBQQA",
+    "title": "Bánh canh chay",
+    "thumbnail": "https://monngonmoingay.com/wp-content/uploads/2015/08/banh-canh-chay-880.jpg.webp",
+    "content": "Sơ chế. Nước dùng: Cho cà rốt, su hào, bắp mỹ, củ cải trắng cắt khúc 5cm cho vào 2 lít nước, nấu sôi, giảm lửa vừa trong vòng 40p, lọc lấy 1.5 lít nước dùng, giữ lại bắp. .Chả lụa chay cắt lát mỏng. Nấm rơm cắt đôi..Phi thơm hành boaro với dầu, vớt boaro ra để riêng, tiếp tục xào sơ nấm rơm và 1m hạt nêm Aji-ngon® Nấm và ít tiêu..Cà rốt tỉa hoa, cắt miếng. Ngò rí cắt nhỏ. Đậu hũ cắt miếng vuông..Thực hiện.Đun sôi nước, trụng bánh canh để bánh canh ngon, không bị chua..Đun sôi nước dùng, cho cà rốt tỉa hoa, nấm rơm, đậu hũ nêm 2M hạt nêm Aji-ngon® Nấm, 1/2m bột ngọt AJI-NO-MOTO®, 1m muối, 1m đường, nếm vị vừa ăn, cho 2M dầu điều, cho bánh canh, chả lụa vào, đun vừa sôi, cho 2M nước bột năng vào cho sôi lại, tắt lửa, cho boaro phi vào..Cách dùng.Múc bánh canh ra tô, rồi múc nước dùng vào, rắc tiêu, poa-rô phi, ngò rí và tàu hũ ky, ăn kèm với ớt băm, chanh.",
+    "ingredient": ". - Cần tây: 400g. - Mật ong: 30ml. - Dụng cụ: máy xay sinh tố, dao, ly thủy tinh…",
+    "prep_time": 10,
+    "cook_time": 10,
+    "difficulty": "trung binh",
+    "nutrition": "Chất bột đường: 200 kcal..Chất đạm: 300 kcal..Chất béo: 300 kcal.",
+    "product_ids": "",
+    "views": 12541,
+    "created_at": "2022-07-09T21:39:58Z",
+    "updated_at": "2022-07-09T21:39:58Z",
+    "products": [
+      {
+        "id": "01G7JEMSC1CFBA3NRNQ5RTWZ7Y",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSDFCPCH4HKHZTCY0MBA",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=174664448&store_id=264462",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSEX679DEX2291X7ANYV",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173389745&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSGBXG5P9FPSXQCFZJMC",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSHSEQ7DQJWGSEB5A6QY",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=71890713&store_id=44570",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      }
+    ],
+    "author": {
+      "id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+      "user_id": "01G7JA5CGPJN05DGPNQWDQDR5G",
+      "name": "Thanh Quang",
+      "address": "",
+      "created_at": "2022-07-09T20:24:36Z",
+      "updated_at": "2022-07-09T20:24:36Z"
+    },
+    "category": {
+      "id": "01G7JA7Z9598BS2MJZG02XBQQA",
+      "name": "Món cơm",
+      "thumbnail": "https://i.ibb.co/yS0cDNc/22-bento-128.png",
+      "created_at": "2022-07-09T20:26:01Z",
+      "updated_at": "2022-07-09T20:26:01Z"
+    },
+    "tags": [
+      {
+        "id": "01G7JBZWFYGRMFFJA55V206E6Y",
+        "name": "#eatclean",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWHBWB41PZ2GRN5ZH1S3",
+        "name": "#keto",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWJXB9S2S7DMQECPTDB9",
+        "name": "#songkhoe",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWM8N877R3G2A16DGQTB",
+        "name": "#angichoigi",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWNJK364T4163B7NN695",
+        "name": "#dacsan",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      }
+    ]
   },
   {
-    "id": "23e54755-a1d5-4cf2-859e-b9b48ded29ec",
-    "name": "Bún/Phở/Mì",
-    "thumbnail": "https://i.ibb.co/smKSKvf/12-noodle-128.png",
-    "created_at": "1944-01-17T13:09:36.219461603Z",
-    "updated_at": "1910-01-01T19:18:16.400059141Z"
+    "id": "01G7JEFCF8WCB5PT9KTAMWX0NV",
+    "author_id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+    "category_id": "01G7JA7Z9598BS2MJZG02XBQQA",
+    "title": "NƯỚC ÉP CẦN TÂY TỐT CHO SỨC KHỎE",
+    "thumbnail": "https://cdn.daotaobeptruong.vn/wp-content/uploads/2021/02/nuoc-ep-can-tay.jpg",
+    "content": "Sơ chế:.Cần Tây nhặt bỏ lá, chỉ lấy phần thân vì lá sẽ làm nước ép bị đắng. Đem cần tây đi rửa sạch với nước muối loãng rồi để ráo, sau đó cắt thành từng khúc ngắn cho dễ ép..Chế biến:.Cho cần tây vào máy xay sinh tố và đổ thêm một ly nước. Bật nút xay trong vòng 1 – 2 phút để xay nhuyễn cần tây..Thưởng thức.Chuẩn bị ly đựng nước ép, đặt rây lên miệng ly rồi rót sinh tố vào ly. Dùng muỗng ép và nhấn để nước ép chảy xuống, phần bã sẽ được giữ lại trên rây lọc..Thêm mật ong vào ly nước ép, dùng muỗng khuấy đều rồi thưởng thức. Nếu thích uống lạnh bạn có thể cho thêm đá viên.",
+    "ingredient": ". - Cần tây: 400g. - Mật ong: 30ml. - Dụng cụ: máy xay sinh tố, dao, ly thủy tinh…",
+    "prep_time": 10,
+    "cook_time": 10,
+    "difficulty": "trung binh",
+    "nutrition": "Sodium 215mg, Potassium 670mg, Carbohydrates:9g, Dietary Fiber:4g, Sugars:6g, Protein:2g, Vitamin A, Vitamin C",
+    "product_ids": "",
+    "views": 2294,
+    "created_at": "2022-07-09T21:39:58Z",
+    "updated_at": "2022-07-09T21:39:58Z",
+    "products": [
+      {
+        "id": "01G7JEMSC1CFBA3NRNQ5RTWZ7Y",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSDFCPCH4HKHZTCY0MBA",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=174664448&store_id=264462",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSEX679DEX2291X7ANYV",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173389745&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSGBXG5P9FPSXQCFZJMC",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSHSEQ7DQJWGSEB5A6QY",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=71890713&store_id=44570",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      }
+    ],
+    "author": {
+      "id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+      "user_id": "01G7JA5CGPJN05DGPNQWDQDR5G",
+      "name": "Thanh Quang",
+      "address": "",
+      "created_at": "2022-07-09T20:24:36Z",
+      "updated_at": "2022-07-09T20:24:36Z"
+    },
+    "category": {
+      "id": "01G7JA7Z9598BS2MJZG02XBQQA",
+      "name": "Món cơm",
+      "thumbnail": "https://i.ibb.co/yS0cDNc/22-bento-128.png",
+      "created_at": "2022-07-09T20:26:01Z",
+      "updated_at": "2022-07-09T20:26:01Z"
+    },
+    "tags": [
+      {
+        "id": "01G7JBZWFYGRMFFJA55V206E6Y",
+        "name": "#eatclean",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWHBWB41PZ2GRN5ZH1S3",
+        "name": "#keto",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWJXB9S2S7DMQECPTDB9",
+        "name": "#songkhoe",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWM8N877R3G2A16DGQTB",
+        "name": "#angichoigi",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWNJK364T4163B7NN695",
+        "name": "#dacsan",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      }
+    ]
   },
   {
-    "id": "7ea3aa07-1b66-400d-a1b2-879e4263e346",
-    "name": "Đồ uống",
-    "thumbnail": "https://i.ibb.co/M7kP3Cq/Drink.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
+    "id": "01G7JEFCGVSQZA4V6P7ADX9VJC",
+    "author_id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+    "category_id": "01G7JA7Z9598BS2MJZG02XBQQA",
+    "title": "Mỳ Ý Chà Bông Gà & Cải Bắp Với Chanh & Parmesan.",
+    "thumbnail": "https://songkhoe.medplus.vn/wp-content/uploads/2021/04/dang-cap-nha-hang-1.png",
+    "content": "Món mì một chảo này kết hợp thịt ức gà nạc và rau bina xào cho một bữa ăn một bát có mùi thơm, chanh và tốt nhất nên ăn kèm với một ít Parm ở trên. Tôi gọi nó là Mom's Skillet Pasta và mẹ gọi nó là Devon's Favourite Pasta. Dù thế nào thì đó cũng là một bữa tối trong tuần nhanh chóng và dễ dàng mà chúng tôi đã cùng nhau tạo ra và viết nguệch ngoạc trên một thẻ công thức nhỏ cách đây hơn một thập kỷ, và nó vẫn nằm trong vòng quay bữa tối hàng tuần của tôi cho đến ngày nay. Đó là một bữa tối đơn giản mà cả gia đình sẽ thích.. Nấu mì ống theo hướng dẫn trên bao bì. Để ráo nước và để sang một bên.. Trong khi đó, đun nóng dầu trong chảo lớn có mặt cao ở nhiệt độ trung bình-cao. Thêm thịt gà, muối và hạt tiêu; nấu, thỉnh thoảng khuấy cho đến khi vừa chín tới, 5 đến 7 phút.. Thêm tỏi và nấu, đảo đều, cho đến khi có mùi thơm, khoảng 1 phút. Khuấy rượu vang, nước cốt chanh và vỏ chanh leo; đun sôi. .Làm mềm khỏi nhiệt. Xào rau bina và mì ống đã nấu chín..Đậy nắp và để yên cho đến khi rau bina chín hoàn toàn. . Chia cho 4 đĩa và cho 1 thìa Parmesan lên trên mỗi đĩa.",
+    "ingredient": ". - Cần tây: 400g. - Mật ong: 30ml. - Dụng cụ: máy xay sinh tố, dao, ly thủy tinh…",
+    "prep_time": 10,
+    "cook_time": 10,
+    "difficulty": "trung binh",
+    "nutrition": "335 calories; protein 28.7g; carbohydrates 24.9g; dietary fiber 2g; sugars 1.1g; fat 12.3g; saturated fat 2.7g; cholesterol 66.9mg; vitamin a iu 7100IU; vitamin c 30.8mg; folate 154.8mcg; calcium 143.6mg; iron 3.3mg; magnesium 107.9mg; potassium 684.5mg; sodium 499.2mg; thiamin 0.2mg.",
+    "product_ids": "",
+    "views": 2261,
+    "created_at": "2022-07-09T21:39:58Z",
+    "updated_at": "2022-07-09T21:39:58Z",
+    "products": [
+      {
+        "id": "01G7JEMSC1CFBA3NRNQ5RTWZ7Y",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSDFCPCH4HKHZTCY0MBA",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=174664448&store_id=264462",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSEX679DEX2291X7ANYV",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173389745&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSGBXG5P9FPSXQCFZJMC",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSHSEQ7DQJWGSEB5A6QY",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=71890713&store_id=44570",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      }
+    ],
+    "author": {
+      "id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+      "user_id": "01G7JA5CGPJN05DGPNQWDQDR5G",
+      "name": "Thanh Quang",
+      "address": "",
+      "created_at": "2022-07-09T20:24:36Z",
+      "updated_at": "2022-07-09T20:24:36Z"
+    },
+    "category": {
+      "id": "01G7JA7Z9598BS2MJZG02XBQQA",
+      "name": "Món cơm",
+      "thumbnail": "https://i.ibb.co/yS0cDNc/22-bento-128.png",
+      "created_at": "2022-07-09T20:26:01Z",
+      "updated_at": "2022-07-09T20:26:01Z"
+    },
+    "tags": [
+      {
+        "id": "01G7JBZWFYGRMFFJA55V206E6Y",
+        "name": "#eatclean",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWHBWB41PZ2GRN5ZH1S3",
+        "name": "#keto",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWJXB9S2S7DMQECPTDB9",
+        "name": "#songkhoe",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWM8N877R3G2A16DGQTB",
+        "name": "#angichoigi",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWNJK364T4163B7NN695",
+        "name": "#dacsan",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWQ1TDQMY9H335JCFFG1",
+        "name": "#monngonmoingay",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      }
+    ]
   },
   {
-    "id": "c78821d9-c83b-4bcd-b9af-f4a46c02e51d",
-    "name": "Đồ ăn nhanh",
-    "thumbnail": "https://i.ibb.co/K92KLtL/3-hamburger-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "5793e917-a900-40b8-a7b4-4cc845f07ec3",
-    "name": "Ăn vặt",
-    "thumbnail": "https://i.ibb.co/zNrmJcQ/25-ice-cream-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "a4b9e5c6-5d0f-4cad-85f7-62a5977be3b5",
-    "name": "Ăn Healthy",
-    "thumbnail": "https://i.ibb.co/0swZnNx/23-egg-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "0dfb1b3b-5e37-450b-ad0d-01b4578b0107",
-    "name": "Món lẩu",
-    "thumbnail": "https://i.ibb.co/WgSQCnL/9-thai-soup-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "e24d668b-9117-4c2f-b4dc-84cf1588f4c4",
-    "name": "Hải sản",
-    "thumbnail": "https://i.ibb.co/nj8LNbc/1-shrimp-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "b033d16e-99b0-4072-b56e-d0be6878e975",
-    "name": "Đồ ngọt",
-    "thumbnail": "https://i.ibb.co/L0MZY56/29-pie-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "b470cbfa-80dc-4682-9ea7-d71158c54e33",
-    "name": "Đặc sản 3 miền",
-    "thumbnail": "https://i.ibb.co/2c525vm/28-dango-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "97a2569a-063a-46dd-ae79-5a1aa29c3073",
-    "name": "Đặc sản nước ngoài",
-    "thumbnail": "https://i.ibb.co/bvZNLYT/7-steak-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "caeb4770-ab48-49eb-86a0-8ab0632cb42d",
-    "name": "Món soup/canh",
-    "thumbnail": "https://i.ibb.co/2cVfY6s/14-meatball-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "6d5a0bea-723a-43a0-94aa-6c144e62120f",
-    "name": "Món ngon 10 phút",
-    "thumbnail": "https://i.ibb.co/KwQmrYs/2-sausage-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "ec9d568b-f394-4211-9d71-b99120791ab5",
-    "name": "Dinh dưỡng cao",
-    "thumbnail": "https://i.ibb.co/tqD3z8c/10-oyster-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "78b18169-5a2a-4f38-8994-acca7c4755ff",
-    "name": "Bữa sáng",
-    "thumbnail": "https://i.ibb.co/Y29ZWMv/6-breakfast-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "ff686fcc-5131-4efa-9500-117931d9d937",
-    "name": "Bữa trưa",
-    "thumbnail": "https://i.ibb.co/XVyfYpJ/16-fied-rice-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "3bcc4666-c8c2-43a7-bf0f-4a7a19cebf26",
-    "name": "Bữa tối",
-    "thumbnail": "https://i.ibb.co/L9SXPW3/13-spaghetti-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
-  },
-  {
-    "id": "8df60772-1744-476b-b860-43373d0d4ca2",
-    "name": "Salad",
-    "thumbnail": "https://i.ibb.co/vPNWkVb/19-salad-128.png",
-    "created_at": "1925-10-24T03:13:39.897477938Z",
-    "updated_at": "1947-10-19T13:02:45.515487394Z"
+    "id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+    "author_id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+    "category_id": "01G7JA7Z9598BS2MJZG02XBQQA",
+    "title": "Mực ống hấp gừng",
+    "thumbnail": "https://cdn.tgdd.vn/Files/2020/12/01/1310598/tong-hop-cac-mon-ngon-hap-dan-tu-muc-dam-bao-ai-cung-thich-202012011132427053.jpg",
+    "content": "Sơ chế.Mực sau khi mua về bạn rửa qua với rượu trắng để giảm bớt mùi tanh của mực rồi rửa sạch lại với nước muối pha loãng và để ráo. Nếu không có rượu trắng bạn cũng có thể dùng một ít gừng băm nhuyễn rồi dùng bóp kỹ với mực để khử mùi nhé..Cà rốt gọt vỏ rồi đem thái sợi to. Gừng nạo sạch vỏ rồi cắt sợi nhỏ. Hành tây bóc vỏ rồi thái nhỏ. Hành lá và cần tàu rửa sạch rồi cắt khúc dài..Ướp mực:.Cho mực ra tô và ướp cùng 1 muỗng hạt nêm, 1 muỗng muối và ½ muỗng tiêu rồi ướp trong khoảng 20 phút cho ngấm đều..Trong khi chờ ướp mực dùng cối giã 1 ít gừng cùng 2 trái ớt cho nhuyễn, tiếp đến pha vào 3 muỗng canh nước mắm và 2 muỗng canh đường, dùng thìa khuấy đều cho đến khi hỗn hợp tan đường. Sau cùng cho thêm ít chanh và nêm nếm cho vừa khẩu vị. Cho hỗn hợp ra chén là bạn đã có ngay nước mắm gừng thơm ngon rồi..Hấp mực.Dùng một đĩa sứ có lòng sâu cho các loại rau củ vào và thêm mực đã ướp sẵn, cho hành lá, cần tàu rải đều lên trên. Tiếp đến đem mực cho vào xửng hấp rồi hấp khoảng 15 phút là chín. Lưu ý không nên hấp quá lâu sẽ làm mất độ giòn và ngọt của mực..Thành phẩm:.Sau khi tắt bếp không nên mở vung ra vội mà cứ để nguyên cho mực hấp thụ hết mùi thơm của gừng, tiếp đến cho mực ra đĩa và trang trí thêm vài lát gừng hoặc vài lát ớt lên trên cho món ăn thêm hấp dẫn. Dùng nóng với chén mắm gừng trong ngày mưa se se lạnh thì còn gì bằng. Chỉ với vài bước đơn giản và nhanh chóng vậy là bạn đã có ngay món mực thơm ngon để nhâm nhi rồi, mực giòn sần sật hòa quyện cùng hương thơm của gừng giúp cả nhà ấm bụng, chẳng lo cảm lạnh ngày mưa. Chúc bạn thành công.",
+    "ingredient": ". - Mực: 300g . - Gừng: 70gr . Hành tây: 1 củ . Cà rốt: 1 củ . Ớt tươi: 2 trái . Hành lá và cần tàu . Chanh: 1 quả.Gia vị: nước mắm, tiêu, muối, đường, hạt nêm, rượu trắng",
+    "prep_time": 10,
+    "cook_time": 10,
+    "difficulty": "trung binh",
+    "nutrition": "Chất bột đường: 1.500 kcal..Chất đạm: 300 kcal..Chất béo: 625 kcal.",
+    "product_ids": "",
+    "views": 2294,
+    "created_at": "2022-07-09T21:39:58Z",
+    "updated_at": "2022-07-09T21:39:58Z",
+    "products": [
+      {
+        "id": "01G7JEMSC1CFBA3NRNQ5RTWZ7Y",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSDFCPCH4HKHZTCY0MBA",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=174664448&store_id=264462",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSEX679DEX2291X7ANYV",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173389745&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSGBXG5P9FPSXQCFZJMC",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=173386971&store_id=248797",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      },
+      {
+        "id": "01G7JEMSHSEQ7DQJWGSEB5A6QY",
+        "recipe_id": "01G7JEFCJEJFA0B8F3QKQKZ9EY",
+        "name": "",
+        "data_source": "Tiki",
+        "data_source_url": "https://api.tiki.vn/raiden/v2/widget/seller_product?spid=71890713&store_id=44570",
+        "created_at": "2022-07-09T21:42:55Z",
+        "updated_at": "2022-07-09T21:42:55Z"
+      }
+    ],
+    "author": {
+      "id": "01G7JA5CGT5R7QS89T7DBYQ82N",
+      "user_id": "01G7JA5CGPJN05DGPNQWDQDR5G",
+      "name": "Thanh Quang",
+      "address": "",
+      "created_at": "2022-07-09T20:24:36Z",
+      "updated_at": "2022-07-09T20:24:36Z"
+    },
+    "category": {
+      "id": "01G7JA7Z9598BS2MJZG02XBQQA",
+      "name": "Món cơm",
+      "thumbnail": "https://i.ibb.co/yS0cDNc/22-bento-128.png",
+      "created_at": "2022-07-09T20:26:01Z",
+      "updated_at": "2022-07-09T20:26:01Z"
+    },
+    "tags": [
+      {
+        "id": "01G7JBZWFYGRMFFJA55V206E6Y",
+        "name": "#eatclean",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWHBWB41PZ2GRN5ZH1S3",
+        "name": "#keto",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWJXB9S2S7DMQECPTDB9",
+        "name": "#songkhoe",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWM8N877R3G2A16DGQTB",
+        "name": "#angichoigi",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWNJK364T4163B7NN695",
+        "name": "#dacsan",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      },
+      {
+        "id": "01G7JBZWQ1TDQMY9H335JCFFG1",
+        "name": "#monngonmoingay",
+        "type": "recipe",
+        "created_at": "2022-07-09T20:56:33Z",
+        "updated_at": "2022-07-09T20:56:33Z"
+      }
+    ]
   }
 ]
